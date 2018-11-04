@@ -1,6 +1,19 @@
 {
   "undef": true,
   "unused": true,
+  "globals": {
+    "require": true,
+    "XMLHttpRequest": true,
+    "document": true,
+    "window": true,
+    "console": true,
+    "MAPBOX_API_KEY": true,
+    "L": true,
+    "DBHelper": true
+  },
+  "exported": {
+    "MAPBOX_API_KEY": true
+  },
 
   "esversion": 6
 }
