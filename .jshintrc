@@ -9,7 +9,8 @@
     "console": true,
     "MAPBOX_API_KEY": true,
     "L": true,
-    "DBHelper": true
+    "DBHelper": true,
+    "self": true
   },
   "exported": {
     "MAPBOX_API_KEY": true
