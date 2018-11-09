@@ -232,6 +232,13 @@ nav {
 	}
 
 	#map-container {
+		@media screen and (max-width: 640px) {
+			border-radius: 0;
+			width        : 100%;
+			height       : 300px;
+			margin       : 0;
+			order        : -2;
+		}
 		@include shadow(1);
 		border-radius: 5px;
 		background   : blue none repeat scroll 0 0;
@@ -241,6 +248,9 @@ nav {
 	}
 
 	#map {
+		@media screen and (max-width: 640px) {
+			border-radius: 0;
+		}
 		border-radius   : 5px;
 		background-color: #ccc;
 		min-height      : 100%;
@@ -250,6 +260,10 @@ nav {
 }
 
 #restaurant-name {
+	@media screen and (max-width: 640px) {
+		order  : -1;
+		padding: 0;
+	}
 	text-shadow   : 1px 1px rgba(51,51,51,0.62);
 	color         : #f18700;
 	font-size     : 20pt;
@@ -262,6 +276,9 @@ nav {
 }
 
 #restaurant-img {
+	@media screen and (max-width: 640px) {
+		border-radius: 0;
+	}
 	@include shadow(1);
 	border-top-left-radius : 5px;
 	border-top-right-radius: 5px;
@@ -269,7 +286,11 @@ nav {
 }
 
 #restaurant-address {
+	@media screen and (max-width: 640px) {
+		border-radius: 0;
+	}
 	@include shadow(1);
+	margin                 : 0;
 	border-top-left-radius : 5px;
 	border-top-right-radius: 5px;
 	background-color       : #333;
@@ -277,10 +298,12 @@ nav {
 	font-size              : 12pt;
 	text-align             : center;
 	padding                : 5px 0;
-	margin                 : 0;
 }
 
 #restaurant-cuisine {
+	@media screen and (max-width: 640px) {
+		border-radius: 0;
+	}
 	@include shadow(1);
 	border-bottom-left-radius : 5px;
 	border-bottom-right-radius: 5px;
@@ -379,12 +402,15 @@ nav {
 
 #restaurant-hours {
 	@include shadow(1);
+	@media screen and (max-width: 640px) {
+		border-radius: 0;
+	}
+	margin                    : 0;
+	text-align                : center;
 	color                     : #666;
 	background-color          : #fff;
 	border-bottom-left-radius : 5px;
 	border-bottom-right-radius: 5px;
-
-	td {}
 }
 
 #breadcrumb {
@@ -406,11 +432,11 @@ nav {
 				text-decoration: underline;
 			}
 		}
-	}
-	/* Add a slash symbol (/) before/behind each list item */
-	li+li::before {
-		padding: 8px;
-		color  : black;
-		content: "/\00a0";
+		/* Add a slash symbol (/) before/behind each list item */
+		::before {
+			padding: 8px;
+			color  : black;
+			content: "/\00a0";
+		}
 	}
 }

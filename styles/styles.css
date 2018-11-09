@@ -222,6 +222,15 @@ nav {
   margin: 15px;
   width: 600px;
   height: 600px; }
+  @media screen and (max-width: 640px) {
+    .inside #map-container {
+      border-radius: 0;
+      width: 100%;
+      height: 300px;
+      margin: 0;
+      -webkit-box-ordinal-group: -1;
+          -ms-flex-order: -2;
+              order: -2; } }
 
 .inside #map {
   border-radius: 5px;
@@ -229,6 +238,9 @@ nav {
   min-height: 100%;
   width: 100%;
   font-family: "Open Sans", sans-serif; }
+  @media screen and (max-width: 640px) {
+    .inside #map {
+      border-radius: 0; } }
 
 #restaurant-name {
   text-shadow: 1px 1px rgba(51, 51, 51, 0.62);
@@ -240,6 +252,12 @@ nav {
   text-transform: uppercase;
   width: 100%;
   text-align: center; }
+  @media screen and (max-width: 640px) {
+    #restaurant-name {
+      -webkit-box-ordinal-group: 0;
+          -ms-flex-order: -1;
+              order: -1;
+      padding: 0; } }
 
 #restaurant-img {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -247,18 +265,24 @@ nav {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   width: 100%; }
+  @media screen and (max-width: 640px) {
+    #restaurant-img {
+      border-radius: 0; } }
 
 #restaurant-address {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin: 0;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   background-color: #333;
   color: #ddd;
   font-size: 12pt;
   text-align: center;
-  padding: 5px 0;
-  margin: 0; }
+  padding: 5px 0; }
+  @media screen and (max-width: 640px) {
+    #restaurant-address {
+      border-radius: 0; } }
 
 #restaurant-cuisine {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -274,6 +298,9 @@ nav {
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase; }
+  @media screen and (max-width: 640px) {
+    #restaurant-cuisine {
+      border-radius: 0; } }
 
 #restaurant-container {
   display: -webkit-box;
@@ -368,10 +395,15 @@ nav {
 #restaurant-hours {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin: 0;
+  text-align: center;
   color: #666;
   background-color: #fff;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px; }
+  @media screen and (max-width: 640px) {
+    #restaurant-hours {
+      border-radius: 0; } }
 
 #breadcrumb {
   padding: 10px 40px 16px;
@@ -379,11 +411,11 @@ nav {
   background-color: #eee;
   font-size: 17px;
   margin: 0;
-  /* Display list items side by side */
-  /* Add a slash symbol (/) before/behind each list item */ }
+  /* Display list items side by side */ }
   #breadcrumb li {
     display: inline;
-    /* Add a color to all links inside the list */ }
+    /* Add a color to all links inside the list */
+    /* Add a slash symbol (/) before/behind each list item */ }
     #breadcrumb li a {
       color: #0275d8;
       text-decoration: none;
@@ -391,7 +423,7 @@ nav {
       #breadcrumb li a :hover {
         color: #01447e;
         text-decoration: underline; }
-  #breadcrumb li + li::before {
-    padding: 8px;
-    color: black;
-    content: "/\00a0"; }
+    #breadcrumb li ::before {
+      padding: 8px;
+      color: black;
+      content: "/\00a0"; }
