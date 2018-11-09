@@ -10,7 +10,9 @@
     "MAPBOX_API_KEY": true,
     "L": true,
     "DBHelper": true,
-    "self": true
+    "self": true,
+    "navigator": true,
+    "caches": true
   },
   "exported": {
     "MAPBOX_API_KEY": true
