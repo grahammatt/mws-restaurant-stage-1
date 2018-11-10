@@ -78,6 +78,7 @@ let initMap = () => {
     scrollWheelZoom: false
   });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
+    // TODO: if keys.js is not included in the scripts folder then replace with your mapbox api key
     mapboxToken: MAPBOX_API_KEY,
     maxZoom: 18,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +

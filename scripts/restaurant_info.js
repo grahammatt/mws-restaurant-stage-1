@@ -137,21 +137,25 @@ let createReviewHTML = (review) => {
   head.classList.add("review-header");
   const name = document.createElement('div');
   name.classList.add("review-name");
+  name.setAttribute('tabindex', '0');
   name.innerHTML = review.name;
   head.appendChild(name);
 
   const date = document.createElement('div');
+  date.setAttribute('tabindex', '0');
   date.classList.add("review-date");
   date.innerHTML = review.date;
   head.appendChild(date);
 
   li.appendChild(head);
   const rating = document.createElement('div');
+  rating.setAttribute('tabindex', '0');
   rating.classList.add("rating");
   rating.innerHTML = `Rating: ${review.rating}`;
   li.appendChild(rating);
 
   const comments = document.createElement('p');
+  comments.setAttribute('tabindex', '0');
   comments.innerHTML = review.comments;
   li.appendChild(comments);
   return li;
