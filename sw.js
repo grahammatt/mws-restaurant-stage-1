@@ -1,4 +1,6 @@
 /*Service Worker
+ *Code comes from following along with this guide
+ *updated to es6 syntax
  *https://developers.google.com/web/fundamentals/primers/service-workers/
  */
 const CACHE_NAME = 'my-site-cache-v1';
@@ -31,7 +33,7 @@ self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
     .then(response => {
-      // Cache hit - return response
+      // Cache hit - return cache response
       // else attempt to fetch
       return response ? response : fetch(event.request);
     })
